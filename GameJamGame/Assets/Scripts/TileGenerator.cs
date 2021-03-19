@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class TileGenerator : MonoBehaviour
 {
-
+    public GameObject[] tilePrefabs;
 
     // Start is called before the first frame update
     void Start()
