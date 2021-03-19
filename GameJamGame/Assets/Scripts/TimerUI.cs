@@ -18,7 +18,7 @@ public class TimerUI : MonoBehaviour
 
     private void Counter_OnTimeChanged(object sender, Counter.OnTimeChangedEventArgs e)
     {
-        text.text = e.currentTime.ToString();
+        text.text = e.currentTime.ToString(); //Show current time
         if(e.currentTime <= 0)
         {
             text.text = "Start!";
