@@ -8,6 +8,8 @@ public class PlayerTwoControl : MonoBehaviour
 
     public Counter Counter;
 
+    public Animator animator;
+
     private Vector2 _movement;
 
     private bool _canMove;
@@ -30,8 +32,17 @@ public class PlayerTwoControl : MonoBehaviour
         {
             _movement.x = Input.GetAxisRaw("Horizontal");
             _movement.y = Input.GetAxisRaw("Vertical");
+            if (_movement.y != 0 || _movement.x != 0)
+            {
+                animator.Play("PlayerTwo_Run");
+            }
+            else
+            {
+                animator.Play("PlayerTwo_Idle");
+            }
         }
         transform.position += transform.right * _movement.x * Time.deltaTime * speed;
         transform.position += transform.up * _movement.y * Time.deltaTime * speed;
+
     }
 }

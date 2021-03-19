@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7615841326446472981}
   - component: {fileID: 2390656808938648652}
   - component: {fileID: 7523222611884975094}
+  - component: {fileID: 2902472835550242326}
   m_Layer: 0
   m_Name: PlayerTwo
   m_TagString: Player
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   Counter: {fileID: 0}
+  animator: {fileID: 2902472835550242326}
 --- !u!61 &2390656808938648652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,3 +147,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &2902472835550242326
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615841326446472978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fee09e5b769200b488a73881d1e46059, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

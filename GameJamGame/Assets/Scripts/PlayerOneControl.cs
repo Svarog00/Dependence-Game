@@ -8,6 +8,8 @@ public class PlayerOneControl : MonoBehaviour
 
     public Counter Counter;
 
+    public Animator animator;
+
     private bool _canMove;
 
     void Start()
@@ -28,19 +30,27 @@ public class PlayerOneControl : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.RightArrow))
             {
+                animator.Play("PlayerOne_Run");
                 transform.position += transform.right * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow))
             {
+                animator.Play("PlayerOne_Run");
                 transform.position -= transform.right * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.UpArrow))
+            else if (Input.GetKey(KeyCode.UpArrow))
             {
+                animator.Play("PlayerOne_Run");
                 transform.position += transform.up * speed * Time.deltaTime;
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKey(KeyCode.DownArrow))
             {
+                animator.Play("PlayerOne_Run");
                 transform.position -= transform.up * speed * Time.deltaTime;
+            }
+            else
+            {
+                animator.Play("PlayerOne_Idle");
             }
         }
     }
