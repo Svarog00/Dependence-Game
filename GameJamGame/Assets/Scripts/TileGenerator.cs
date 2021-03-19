@@ -11,7 +11,9 @@ public class TileGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         //subscribe on door open event
+        SpawnTile();
     }
 
     // Update is called once per frame
@@ -22,6 +24,6 @@ public class TileGenerator : MonoBehaviour
 
     void SpawnTile()
     {
-        Instantiate(tilePrefabs[Random.Range(0, tilePrefabs.Length)], transform.forward*shift, transform.rotation);
+        Instantiate(tilePrefabs[Random.Range(0, tilePrefabs.Length)], transform.up*shift, transform.rotation);
     }
 }
