@@ -29,7 +29,6 @@ public class Counter : MonoBehaviour
         {
             curTime -= Time.deltaTime;
             OnTimeChanged?.Invoke(this, new OnTimeChangedEventArgs { currentTime = (int)curTime });
-            Debug.Log($"Current Time: {curTime}");
             if(curTime <= 0)
             {
                 OnStartSignal?.Invoke(this, EventArgs.Empty);
