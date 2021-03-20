@@ -22,7 +22,7 @@ public class RoadPointsSpawn : MonoBehaviour
 
     GameObject generateObject()
     {
-        _weight = Random.Range(0, 100);
+        _weight = Random.Range(0f, 100f);
         if (_weight >= 0f && _weight < 35f)
         {
             return prefabs[0];

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileGenerator : MonoBehaviour
 {
-    public GameObject tilePrefab;
+    public GameObject[] tilePrefab;
     public float shift = 0;
 
     // Start is called before the first frame update
@@ -24,6 +24,6 @@ public class TileGenerator : MonoBehaviour
     void SpawnTile()
     {
         //Instantiate(tilePrefab, transform.up*shift, transform.rotation);
-        Instantiate(tilePrefab, new Vector2(transform.position.x, transform.position.y+shift), transform.rotation);
+        Instantiate(tilePrefab[Random.Range(0,tilePrefab.Length)], new Vector2(transform.position.x, transform.position.y+shift), transform.rotation);
     }
 }

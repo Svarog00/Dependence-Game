@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
 
     private int _currentHealth;
 
-    void Start()
+    void Awake()
     {
         Instance = this;
         _currentHealth = 3;

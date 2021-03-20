@@ -41,5 +41,7 @@ public class PlayerOneControl : MonoBehaviour
                 animator.Play("PlayerOne_Idle");
             }
         }
+        transform.position += transform.right * _movement.x * Time.deltaTime * speed;
+        transform.position += transform.up * _movement.y * Time.deltaTime * speed;
     }
 }
