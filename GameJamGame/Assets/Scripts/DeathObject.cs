@@ -31,6 +31,7 @@ public class DeathObject : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Health.Instance.DecreaseHealth();
+            ObjectPool.Instance.AddToPool(collision.gameObject);
             PlayerManager.Instance.PlayerCount--;
         }
     }

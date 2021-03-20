@@ -15,15 +15,17 @@ public class Heart : MonoBehaviour
 
     private void Instance_OnHeartChanged(object sender, Health.OnHeartChangedEventAgrs e)
     {
-        Destroy(this);
+        if(e.isRestore)
+        {
+            Destroy(this);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             Health.Instance.RestoreHealth();
-            
         }
     }
 }
