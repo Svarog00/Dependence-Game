@@ -30,7 +30,7 @@ public class DeathObject : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("BOOO");
+            PlayerManager.Instance.PlayerCount--;
         }
     }
 }

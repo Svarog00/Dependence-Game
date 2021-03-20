@@ -13,7 +13,7 @@ public class RoadPointsSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _numOfPoints = Random.Range(0, 6);
+        _numOfPoints = Random.Range(0, 4);
         for(int i = 0; i < _numOfPoints; i++)
         {
             Instantiate(generateObject(), spawnPoints[i]);

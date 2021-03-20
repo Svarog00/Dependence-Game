@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        _playerCount = 2;
         _commonHealth = 3;
     }
 
@@ -43,9 +44,14 @@ public class PlayerManager : MonoBehaviour
         Instance.PlayerCount++;
         var temp = ObjectPool.Instance.GetFromPool();
         if(temp.name == "PlayerOne")
-            temp.transform.position = new Vector2(transform.position.x+0.65f, transform.position.y);
+            temp.transform.position = new Vector2(transform.position.x + 0.65f, transform.position.y);
         else if (temp.name == "PlayerTwo")
             temp.transform.position = new Vector2(transform.position.x - 0.65f, transform.position.y);
+    }
+
+    public void RestoreHealth()
+    {
+        _commonHealth++;
     }
 
 }

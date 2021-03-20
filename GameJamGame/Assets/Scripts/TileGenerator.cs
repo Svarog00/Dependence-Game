@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class TileGenerator : MonoBehaviour
 {
-    public TileGenerator Instance;
-    public GameObject[] tilePrefabs;
+    public GameObject tilePrefab;
     public float shift = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
         //subscribe on door open event
-        SpawnTile();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.CompareTag("Player"))
+        {
+            SpawnTile();
+        }
     }
 
     void SpawnTile()
     {
-        Instantiate(tilePrefabs[Random.Range(0, tilePrefabs.Length)], transform.up*shift, transform.rotation);
+        //Instantiate(tilePrefab, transform.up*shift, transform.rotation);
+        Instantiate(tilePrefab, new Vector2(transform.position.x, transform.position.y+shift), transform.rotation);
     }
 }
