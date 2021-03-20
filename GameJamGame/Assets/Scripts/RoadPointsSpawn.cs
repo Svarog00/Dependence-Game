@@ -13,7 +13,7 @@ public class RoadPointsSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _numOfPoints = Random.Range(0, 4);
+        _numOfPoints = Random.Range(0, 6);
         for(int i = 0; i < _numOfPoints; i++)
         {
             Instantiate(generateObject(), spawnPoints[i]);
@@ -25,23 +25,23 @@ public class RoadPointsSpawn : MonoBehaviour
         _weight = Random.Range(0f, 100f);
         if (_weight >= 0f && _weight < 35f)
         {
-            return prefabs[0];
+            return prefabs[0]; //yama || spikes
         }
         else if (_weight >= 35f && _weight < 71f)
         {
-            return prefabs[1];
+            return prefabs[1]; //yama || spikes
         }
         else if (_weight >= 71f && _weight < 83.5f)
         {
-            return prefabs[2];
+            return prefabs[2]; //heart || caduceus
         }
         else if (_weight >= 83.5f && _weight < 88.5f)
         {
-            return prefabs[3];
+            return prefabs[3]; //key
         }
         else if (_weight >= 88.5f && _weight < 100f)
         {
-            return prefabs[4];
+            return prefabs[4]; //heart || caduceus
         }
         else return null;
     }

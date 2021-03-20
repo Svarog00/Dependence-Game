@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class InventoryScript : MonoBehaviour
 {
-    public GameObject PlayerOne;
-    public GameObject PlayerTwo;
-
-    public Caduceus reviver;
-    public Key key;
-
     // Update is called once per frame
     void Update()
     {

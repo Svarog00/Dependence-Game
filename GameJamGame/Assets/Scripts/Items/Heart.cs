@@ -17,7 +17,7 @@ public class Heart : MonoBehaviour
     {
         if(e.isRestore)
         {
-            Destroy(this);
+            gameObject.SetActive(false);
         }
     }
 

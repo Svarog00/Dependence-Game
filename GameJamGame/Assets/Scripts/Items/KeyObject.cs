@@ -16,6 +16,7 @@ public class KeyObject : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Key.Instance.AddKey();
+            gameObject.SetActive(false);
         }
     }
 }

@@ -16,6 +16,7 @@ public class CaduceusObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Caduceus.Instance.AddCaduceus();
+            gameObject.SetActive(false);
         }
     }
 }
