@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         if(_currentHealth < 3)
         { 
             _currentHealth++;
-            OnHeartChanged?.Invoke(this, new OnHeartChangedEventAgrs { currentHealth = _currentHealth, isRestore = true}) ;
+            OnHeartChanged?.Invoke(this, new OnHeartChangedEventAgrs { currentHealth = _currentHealth, isRestore = true });
         }
     }
 
