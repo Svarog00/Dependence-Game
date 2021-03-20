@@ -6,6 +6,8 @@ public class InventoryScript : MonoBehaviour
 {
     public static InventoryScript instance;
 
+    private IActivatable[] items = new IActivatable[3];
+
     // Start is called before the first frame update
     void Start()
     {
