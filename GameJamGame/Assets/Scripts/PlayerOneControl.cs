@@ -12,6 +12,8 @@ public class PlayerOneControl : MonoBehaviour
 
     private bool _canMove;
 
+    private Vector2 _movement;
+
     void Start()
     {
         Counter.OnStartSignal += Counter_OnStartSignal;
@@ -28,25 +30,11 @@ public class PlayerOneControl : MonoBehaviour
     {
         if(_canMove)
         {
-            if(Input.GetKey(KeyCode.RightArrow))
+            _movement.x = Input.GetAxisRaw("HorizontalTwo");
+            _movement.y = Input.GetAxisRaw("VerticalTwo");
+            if (_movement.y != 0 || _movement.x != 0)
             {
                 animator.Play("PlayerOne_Run");
-                transform.position += transform.right * speed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                animator.Play("PlayerOne_Run");
-                transform.position -= transform.right * speed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.UpArrow))
-            {
-                animator.Play("PlayerOne_Run");
-                transform.position += transform.up * speed * Time.deltaTime;
-            }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                animator.Play("PlayerOne_Run");
-                transform.position -= transform.up * speed * Time.deltaTime;
             }
             else
             {

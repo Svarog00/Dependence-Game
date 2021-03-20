@@ -6,13 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
 
-    private int _commonHealth;
     private int _playerCount;
-    public int CommonHealth
-    {
-        get { return _commonHealth; }
-        set { _commonHealth = value; }
-    }
 
     public int PlayerCount
     {
@@ -24,15 +18,11 @@ public class PlayerManager : MonoBehaviour
     {
         Instance = this;
         _playerCount = 2;
-        _commonHealth = 3;
+        
     }
 
     private void Update()
     {
-        if(_commonHealth == 0)
-        {
-            Debug.Log("F");
-        }
         if(_playerCount == 0)
         {
             Debug.Log("F");
@@ -48,10 +38,4 @@ public class PlayerManager : MonoBehaviour
         else if (temp.name == "PlayerTwo")
             temp.transform.position = new Vector2(transform.position.x - 0.65f, transform.position.y);
     }
-
-    public void RestoreHealth()
-    {
-        _commonHealth++;
-    }
-
 }

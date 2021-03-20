@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             ObjectPool.Instance.AddToPool(collision.gameObject);
-            PlayerManager.Instance.CommonHealth--;
+            Health.Instance.DecreaseHealth();
             PlayerManager.Instance.PlayerCount--;
         }
     }
