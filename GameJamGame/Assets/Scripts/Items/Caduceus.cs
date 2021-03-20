@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Caduceus : MonoBehaviour, IActivatable
+public class Caduceus : IActivatable
 {
+    private int _count = 0;
+
     public void Activate()
     {
-        PlayerManager.Instance.Revive();
+        if (_count > 0 && PlayerManager.Instance.Revive())
+            _count--;
     }
 }
