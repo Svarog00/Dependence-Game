@@ -6,7 +6,7 @@ public class RoadPointsSpawn : MonoBehaviour
 {
     public Transform[] spawnPoints = new Transform[9];
 
-    public GameObject[] prefabs = new GameObject[5];
+    public GameObject[] prefabs;
 
     private int _numOfPoints;
     private float _weight;

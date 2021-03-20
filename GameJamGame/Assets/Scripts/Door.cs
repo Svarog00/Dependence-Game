@@ -19,12 +19,12 @@ public class Door : MonoBehaviour
     {
         button.OnButtonPressed -= Button_OnButtonPressed;
         animator.Play("Door_Open");
-        Invoke("SetActiveFalse", 1.5f);
+        Invoke("SetActiveFalse", 0.5f);
     }
 
     // Update is called once per frame
     private void SetActiveFalse()
     {
-        boxCollider.isTrigger = false;
+        boxCollider.isTrigger = true;
     }
 }

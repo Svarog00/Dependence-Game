@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public GameObject prefab;
     public static ObjectPool Instance;
 
     [SerializeField]
@@ -18,16 +17,6 @@ public class ObjectPool : MonoBehaviour
         //GrowPool();
     }
 
-    private void GrowPool()
-    {
-        for(int i = 0; i < 2; i++)
-        {
-            var instanceToAdd = Instantiate(prefab);
-            instanceToAdd.transform.SetParent(transform);
-            AddToPool(instanceToAdd);
-        }
-    }
-
     public void AddToPool(GameObject instance)
     {
         instance.SetActive(false);
@@ -37,7 +26,7 @@ public class ObjectPool : MonoBehaviour
     public GameObject GetFromPool()
     {
         if (avialableObjects.Count == 0)
-            GrowPool();
+            return null;
 
         var instance = avialableObjects.Dequeue();
         instance.SetActive(true);

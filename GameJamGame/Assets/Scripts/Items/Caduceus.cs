@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Caduceus : MonoBehaviour, IActivatable
 {
-    void Update()
-    {
-
-    }
-
     public void Activate()
     {
-        
+        PlayerManager.Instance.Revive();
     }
 }
