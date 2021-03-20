@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RoadPointsSpawn : MonoBehaviour
 {
-    public Transform[] spawnPoints;
+    public Transform[] spawnPoints = new Transform[9];
 
-    public GameObject[] prefabs;
+    public GameObject[] prefabs = new GameObject[5];
 
     private int _numOfPoints;
     private float _weight;
