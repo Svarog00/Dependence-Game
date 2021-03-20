@@ -10,12 +10,13 @@ public class KeyUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text = GetComponentInChildren<Text>();
         Key.Instance.OnKeyCountChanged += Instance_OnKeyCountChanged;
     }
 
     private void Instance_OnKeyCountChanged(object sender, Key.OnKeyCountChangedEventArgs e)
     {
-        text.text = "x" + e.count.ToString();
+        text.text = "x" + e.count;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class Key : MonoBehaviour
 
     int _count = 0;
 
+    public Text text;
+
     private void Start()
     {
         Instance = this;
-        OnKeyCountChanged?.Invoke(this, new OnKeyCountChangedEventArgs { count = _count });
     }
 
     public void Activate()
@@ -42,6 +44,7 @@ public class Key : MonoBehaviour
     public void AddKey()
     {
         _count++;
+        text.text = "x" + _count.ToString();
         OnKeyCountChanged?.Invoke(this, new OnKeyCountChangedEventArgs { count = _count });
     }
 

@@ -15,6 +15,7 @@ public class CaduceusUI : MonoBehaviour
 
     private void Instance_OnCaduceusCountChanged(object sender, Caduceus.OnCaduceusCountChangedEventArgs e)
     {
+        Debug.LogError(e.count.ToString());
         text.text = "x" + e.count.ToString();
     }
 }
