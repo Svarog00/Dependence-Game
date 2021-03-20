@@ -1,4 +1,0 @@
-﻿interface IActivatable
-{
-    void Activate();
-}

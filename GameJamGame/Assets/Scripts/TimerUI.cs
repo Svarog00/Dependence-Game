@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class TimerUI : MonoBehaviour
 {
-    private Counter counter;
-    private Text text;
+    public Text text;
 
+    private Counter counter;
     private void Start()
     {
-        text = GetComponent<Text>();
-
         counter = FindObjectOfType<Counter>();
         counter.OnTimeChanged += Counter_OnTimeChanged;
     }

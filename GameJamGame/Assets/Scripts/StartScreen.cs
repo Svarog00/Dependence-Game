@@ -8,12 +8,11 @@ public class StartScreen : MonoBehaviour
 {
     public event EventHandler OnSpacePressed;
 
-    private Text text;
+    public Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        text = FindObjectOfType<Text>();
         text.text = "Press Space to start";
     }
 
