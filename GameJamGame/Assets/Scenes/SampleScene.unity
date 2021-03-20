@@ -387,7 +387,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6078432, y: 1}
+    m_SensorSize: {x: 2.2378855, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1223,6 +1223,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TextUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116612016291249939, guid: fbb2be0acbbe6964f8cc431e83264748,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369525069883913144, guid: fbb2be0acbbe6964f8cc431e83264748,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436105709376111620, guid: fbb2be0acbbe6964f8cc431e83264748,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114735254516698552, guid: fbb2be0acbbe6964f8cc431e83264748,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbb2be0acbbe6964f8cc431e83264748, type: 3}
