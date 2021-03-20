@@ -22,6 +22,7 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
+        Score.Instance.AddPoints(PlayerManager.Instance.PlayerCount);
         button.OnButtonPressed -= Button_OnButtonPressed;
         animator.Play("Door_Open");
         Invoke("SetActiveFalse", 0.5f);

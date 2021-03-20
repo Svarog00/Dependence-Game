@@ -392,6 +392,7 @@ MonoBehaviour:
   - {fileID: 9082759209389029936, guid: f1555200bc431654d9b6853411130af1, type: 3}
   - {fileID: 4872767083478761555, guid: b14d0516177ad1342bdda38f232cd352, type: 3}
   shift: 2.2
+  timeShift: 0.01
 --- !u!1 &1763715681742881000
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,10 @@ public class RoadPointsSpawn : MonoBehaviour
         _numOfPoints = Random.Range(0, 6);
         for(int i = 0; i < _numOfPoints; i++)
         {
+            if(spawnPoints[i] == null)
+            {
+                continue;
+            }
             Instantiate(generateObject(), spawnPoints[i]);
         }
     }

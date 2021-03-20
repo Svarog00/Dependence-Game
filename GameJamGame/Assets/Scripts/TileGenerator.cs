@@ -6,6 +6,7 @@ public class TileGenerator : MonoBehaviour
 {
     public GameObject[] tilePrefab;
     public float shift = 0;
+    public float timeShift;
 
     private bool isActivated = false;
 
@@ -20,6 +21,7 @@ public class TileGenerator : MonoBehaviour
         if(other.CompareTag("Player") && !isActivated)
         {
             SpawnTile();
+            Time.timeScale += timeShift;
         }
     }
 
