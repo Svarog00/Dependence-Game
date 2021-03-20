@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
 
+
     private int _playerCount;
 
     public int PlayerCount
@@ -26,6 +27,9 @@ public class PlayerManager : MonoBehaviour
         if(_playerCount == 0)
         {
             Debug.Log("F");
+            Menu menu = FindObjectOfType<Menu>();
+            menu.VisualActive();
+            Time.timeScale = 0;
         }
     }
 

@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Image[] background;
+    public GameObject visual;
     void Start()
-    {
-        
+    { 
+        visual.SetActive(false);
     }
-
 
     public void Retry()
     {
@@ -21,5 +20,10 @@ public class Menu : MonoBehaviour
     public void Exit() 
     {
         Application.Quit();
+    }
+
+    public void VisualActive()
+    {
+        visual.SetActive(true);
     }
 }

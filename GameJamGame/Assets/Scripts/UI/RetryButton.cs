@@ -2,32 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class RetryButton : MonoBehaviour
+public class RetryButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject background;
     public Sprite newBackground;
-    private Image _oldImage;
+    public Sprite _oldImage;
     private Image _currentImage;
     private BoxCollider2D boxCollider;
 
     private void Start()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
-        _oldImage = background.GetComponent<Image>();
-        _currentImage = _oldImage;
+        _currentImage = background.GetComponent<Image>();
     }
 
-    private void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("SOSI");
         _currentImage.sprite = newBackground;
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("SOSI SNOVA");
-        _currentImage.sprite = _oldImage.sprite;
+        _currentImage.sprite = _oldImage;
     }
+
 
 }

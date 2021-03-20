@@ -21,6 +21,7 @@ public class StartScreen : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            Time.timeScale = 1;
             OnSpacePressed?.Invoke(this, EventArgs.Empty); //Call event to start start timer (facepalm, cringe)
         }
     }
