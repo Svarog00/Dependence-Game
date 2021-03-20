@@ -5,10 +5,10 @@ using UnityEngine;
 public class StartDoor : MonoBehaviour
 {
     private Animator animator;
-    private Collider2D collider;
+    private BoxCollider2D boxCollider;
     void Start()
     {
-        collider = GetComponent<Collider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         Counter startScreen = FindObjectOfType<Counter>();
         startScreen.OnTimeChanged += StartScreen_OnTimeChanged;      
@@ -25,6 +25,6 @@ public class StartDoor : MonoBehaviour
 
     private void SetActiveFalse()
     {
-        collider.isTrigger = true;
+        boxCollider.isTrigger = true;
     }
 }
