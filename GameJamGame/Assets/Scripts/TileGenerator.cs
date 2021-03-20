@@ -7,6 +7,8 @@ public class TileGenerator : MonoBehaviour
     public GameObject[] tilePrefab;
     public float shift = 0;
 
+    private bool isActivated = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,7 @@ public class TileGenerator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !isActivated)
         {
             SpawnTile();
         }
@@ -25,5 +27,6 @@ public class TileGenerator : MonoBehaviour
     {
         //Instantiate(tilePrefab, transform.up*shift, transform.rotation);
         Instantiate(tilePrefab[Random.Range(0,tilePrefab.Length)], new Vector2(transform.position.x, transform.position.y+shift), transform.rotation);
+        isActivated = true;
     }
 }

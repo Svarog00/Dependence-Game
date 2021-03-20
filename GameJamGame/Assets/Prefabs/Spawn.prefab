@@ -471,8 +471,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6f011ac25c6474e92932be34c10bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 4872767083478761555, guid: b14d0516177ad1342bdda38f232cd352,
-    type: 3}
+  tilePrefab:
+  - {fileID: 4370698795422666365, guid: 6873f7254aa65ee47a96621c369fc9db, type: 3}
+  - {fileID: 1360360747724854103, guid: f9dfda5febd603f47b0259ee112dc3c0, type: 3}
+  - {fileID: 5251541966824619540, guid: 85dbe605175b5b640bb6f674a37744f9, type: 3}
+  - {fileID: 9082759209389029936, guid: f1555200bc431654d9b6853411130af1, type: 3}
+  - {fileID: 4872767083478761555, guid: b14d0516177ad1342bdda38f232cd352, type: 3}
   shift: 2.4
 --- !u!61 &1363915707418231502
 BoxCollider2D:

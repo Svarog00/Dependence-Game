@@ -29,13 +29,18 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Revive()
+    public bool Revive()
     {
-        Instance.PlayerCount++;
-        var temp = ObjectPool.Instance.GetFromPool();
-        if(temp.name == "PlayerOne")
-            temp.transform.position = new Vector2(transform.position.x + 0.65f, transform.position.y);
-        else if (temp.name == "PlayerTwo")
-            temp.transform.position = new Vector2(transform.position.x - 0.65f, transform.position.y);
+        if (_playerCount == 1)
+        {
+            Instance.PlayerCount++;
+            var temp = ObjectPool.Instance.GetFromPool();
+            if (temp.name == "PlayerOne")
+                temp.transform.position = new Vector2(transform.position.x + 0.65f, transform.position.y);
+            else if (temp.name == "PlayerTwo")
+                temp.transform.position = new Vector2(transform.position.x - 0.65f, transform.position.y);
+            return true;
+        }
+        else return false;
     }
 }
