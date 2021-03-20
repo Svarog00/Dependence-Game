@@ -17,6 +17,11 @@ public class Door : MonoBehaviour
 
     private void Button_OnButtonPressed(object sender, System.EventArgs e)
     {
+        Open();
+    }
+
+    public void Open()
+    {
         button.OnButtonPressed -= Button_OnButtonPressed;
         animator.Play("Door_Open");
         Invoke("SetActiveFalse", 0.5f);
