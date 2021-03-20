@@ -5,17 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("Game over");
+            ObjectPool.Instance.AddToPool(collision.gameObject);
         }
     }
 }

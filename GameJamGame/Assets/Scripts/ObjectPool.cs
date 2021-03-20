@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public int id;
-
     public GameObject prefab;
+    public static ObjectPool Instance;
 
     [SerializeField]
     private Queue<GameObject> avialableObjects = new Queue<GameObject>();
@@ -15,7 +14,8 @@ public class ObjectPool : MonoBehaviour
 
     void Awake()
     {
-        GrowPool();
+        Instance = this;
+        //GrowPool();
     }
 
     private void GrowPool()
@@ -26,10 +26,9 @@ public class ObjectPool : MonoBehaviour
             instanceToAdd.transform.SetParent(transform);
             AddToPool(instanceToAdd);
         }
-        Debug.Log($"Pool {id} has grown");
     }
 
-    private void AddToPool(GameObject instance)
+    public void AddToPool(GameObject instance)
     {
         instance.SetActive(false);
         avialableObjects.Enqueue(instance);
