@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 
     private int _currentScore;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }

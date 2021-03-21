@@ -10,6 +10,8 @@ public class StartScreen : MonoBehaviour
 
     public Text text;
 
+    private bool _isStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,11 @@ public class StartScreen : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !_isStarted)
         {
             Time.timeScale = 1;
             OnSpacePressed?.Invoke(this, EventArgs.Empty); //Call event to start start timer (facepalm, cringe)
+            _isStarted = true;
         }
     }
 }

@@ -17,6 +17,7 @@ public class DoorButton : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Open");
             OnButtonPressed?.Invoke(this, EventArgs.Empty);
             animator.Play("DoorButton_Pressed");
         }

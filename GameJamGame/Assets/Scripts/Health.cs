@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
         public bool isRestore;
     }
 
+    public event EventHandler OnHeartEnded;
+
     private int _currentHealth;
 
     void Awake()
@@ -37,6 +39,10 @@ public class Health : MonoBehaviour
         {
             OnHeartChanged?.Invoke(this, new OnHeartChangedEventAgrs { currentHealth = _currentHealth, isRestore = false});
             _currentHealth--;
+            if (_currentHealth == 0)
+            {
+                OnHeartEnded?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }

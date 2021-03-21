@@ -69,3 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2101895857656468898365458ebf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players:
+  - {fileID: 0}
+  - {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256

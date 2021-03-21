@@ -14,7 +14,7 @@ public class Caduceus : MonoBehaviour
 
     private int _count = 0;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
         OnCaduceusCountChanged?.Invoke(this, new OnCaduceusCountChangedEventArgs { count = _count });

@@ -33,6 +33,9 @@ public class DeathObject : MonoBehaviour
             Health.Instance.DecreaseHealth();
             ObjectPool.Instance.AddToPool(collision.gameObject);
             PlayerManager.Instance.PlayerCount--;
+            CameraShake.Instance.ShakeCamera(.35f, .6f);
+
+            FindObjectOfType<AudioManager>().Play("Death");
         }
     }
 }

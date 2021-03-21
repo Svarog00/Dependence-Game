@@ -12,6 +12,9 @@ public class Obstacle : MonoBehaviour
             ObjectPool.Instance.AddToPool(collision.gameObject);
             Health.Instance.DecreaseHealth();
             PlayerManager.Instance.PlayerCount--;
+            CameraShake.Instance.ShakeCamera(.35f, .6f);
+
+            FindObjectOfType<AudioManager>().Play("Death");
         }
     }
 }
